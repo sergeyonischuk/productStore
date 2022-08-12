@@ -13,15 +13,7 @@ public class Bucket {
         return map;
     }
 
-    public void setMap(HashMap<Article, Integer> map) {
-        this.map = map;
-    }
-
     public Double getTotalPrice() {
         return totalPrice;
-    }
-
-    public void setTotalPrice(Double totalPrice) {
-        this.totalPrice = totalPrice;
     }
 }

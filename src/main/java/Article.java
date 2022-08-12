@@ -16,32 +16,16 @@ public class Article {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public String getCode() {
         return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
     }
 
     public int getSaleCount() {
         return saleCount;
     }
 
-    public void setSaleCount(int saleCount) {
-        this.saleCount = saleCount;
-    }
-
     public Double getSalePrice() {
         return salePrice;
-    }
-
-    public void setSalePrice(Double salePrice) {
-        this.salePrice = salePrice;
     }
 
     @Override
