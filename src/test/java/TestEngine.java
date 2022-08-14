@@ -9,16 +9,29 @@ public class TestEngine {
 
     Engine engine = new Engine();
     @Test
-    public void testCalculateBucketTotalPrice() {
+    public void testCalculateBucketTotalPriceIfArgumentsOk() {
         Bucket bucket = new Bucket();
         bucket.getMap().put(apple, 7);
         bucket.getMap().put(carrot, 3);
         bucket.getMap().put(pumpkin, 7);
         bucket.getMap().put(javelin, 1);
 
-        Double expected = 73623.9d;
-        Double result = engine.calculateBucketTotalPrice(bucket);
+        Double expectedPrice = 73623.9d;
+        Double resultPrice = engine.calculateBucketTotalPrice(bucket);
 
-        Assert.assertEquals(expected, result);
+        Assert.assertEquals(expectedPrice, resultPrice);
+    }
+
+    @Test
+    public void testAddToBucketSuccess() {
+        Bucket bucket = new Bucket();
+        String carrotCode = "C";
+        double carrotPrice = 1d;
+        int countOfCarrots = 5;
+        engine.addToBucket(bucket, carrot, countOfCarrots);
+
+        Assert.assertEquals(carrot.getCode(), carrotCode);
+        Assert.assertTrue(carrot.getPrice() == carrotPrice);
+        Assert.assertTrue(bucket.getMap().get(carrot) == countOfCarrots);
     }
 }

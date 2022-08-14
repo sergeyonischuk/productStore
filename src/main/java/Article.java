@@ -1,6 +1,6 @@
 public class Article {
     private double price;
-    //not char because it will be limit - 26 articles (or 52 with uppercase);
+    //not char because it will be limit - 26 articles (or 52 with upper/lowercase);
     private String code;
     private int saleCount;
     private Double salePrice;
